@@ -1,6 +1,3 @@
-print("Welcome to Student Attendance System")
-
-
 from login import login
 
 students = {}
