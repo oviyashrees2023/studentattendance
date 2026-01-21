@@ -1,13 +1,21 @@
+from login import login
+
 students = {}
 
 def mark_attendance(name, status):
     students[name] = status
 
 def view_attendance():
-    print("Attendance List:")
+    print("\nAttendance List:")
     for name, status in students.items():
         print(name, "-", status)
 
-mark_attendance("Oviya", "Present")
-mark_attendance("Pradeep", "Absent")
-view_attendance()
+# Main program
+if login():
+    print("\nLogin successful. Access granted.\n")
+
+    mark_attendance("Oviya", "Present")
+    mark_attendance("Pradeep", "Absent")
+    view_attendance()
+else:
+    print("Access denied. Invalid login.")
