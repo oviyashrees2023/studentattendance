@@ -1,4 +1,4 @@
-print("Welcome - Updated by Developer A")
+print("Welcome to Student Attendance System")
 
 
 from login import login
